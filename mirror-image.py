@@ -3,6 +3,9 @@
 from PIL import Image
 import os.path
 
+# Intakes file path
+filePath = input("enter path to image: ")
+
 # Creates a boolean to check whether image has been successfully modified and should be saved
 saveImg = True
 
