@@ -4,16 +4,12 @@ from PIL import Image
 import os.path
 import random
 
-# Initial variables
+# Customizable variables
 
 gridsize = (250, 250) # Tuple determining size of grid
 antnum = 50 # Number of ants to randomly place
 frames = False # Boolean indicating whether to save each individual iteration as a frame
 steps = 2000 # Number of steps each ant gets
-colorSwapper = { # Swap black and white after moving ant
-    0: 255,
-    255: 0
-}
 
 # Ant class
 
@@ -53,6 +49,11 @@ class Ant:
 grid = Image.new("L", gridsize, "white") # Create grid with size specified earlier
 cells = grid.load()
 ants = [] # Create empty ant array
+
+colorSwapper = { # Swap black and white after moving ant
+    0: 255,
+    255: 0
+}
 
 if frames: # Creates a frames folder if one does not already exist
     framenum = 0
