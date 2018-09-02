@@ -8,7 +8,7 @@ import random
 
 gridsize = (250, 250) # Tuple determining size of grid
 antnum = 50 # Number of ants to randomly place
-frames = False # Boolean indicating whether to save each individual iteration as a frame
+frames = True # Boolean indicating whether to save each individual iteration as a frame
 steps = 2000 # Number of steps each ant gets
 
 # Ant class
@@ -70,9 +70,11 @@ for a in ants: # Cycles through all steps of all ants, swapping colors and savin
         a.iterate(cells[a.position[0], a.position[1]])
         cells[a.position[0], a.position[1]] = colorSwapper[cells[a.position[0], a.position[1]]]
         if frames:
-            grid.save("frames/frame" + str(frameNum) + ".png")
             frameNum += 1
-
-grid.save("output.png") # Saves final frame as output.png
-
-
+            frameFormatted = format(frameNum, '04d')
+            print(frameFormatted)
+            if frameFormatted == "1000":
+                exit()
+            else:
+                grid.save("frames/frame" + frameFormatted + ".png")
+    grid.save("output.png") # Saves final frame as output.png
