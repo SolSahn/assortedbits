@@ -77,4 +77,4 @@ for a in ants: # Cycles through all steps of all ants, swapping colors and savin
                 exit()
             else:
                 grid.save("frames/frame" + frameFormatted + ".png")
-    grid.save("output.png") # Saves final frame as output.png
+grid.save("output.png") # Saves final frame as output.png
