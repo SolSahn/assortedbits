@@ -6,7 +6,7 @@ import random
 
 # Customizable variables
 
-gridsize = (250, 250) # Tuple determining size of grid
+gridsize = (150, 150) # Tuple determining size of grid
 antnum = 30 # Number of ants to randomly place
 frames = True # Boolean indicating whether to save each individual iteration as a frame
 steps = 500 # Number of steps each ant gets
