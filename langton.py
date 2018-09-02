@@ -56,7 +56,7 @@ colorSwapper = { # Swap black and white after moving ant
 }
 
 if frames: # Creates a frames folder if one does not already exist
-    framenum = 0
+    frameNum = 0
     if not os.path.isdir("frames"):
         os.mkdir("frames")
 
