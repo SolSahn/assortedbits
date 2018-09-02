@@ -1,6 +1,7 @@
 # A script simulating Langton's ant using Pillow
 
 from PIL import Image
+import os.path
 import random
 
 # Customizable variables
