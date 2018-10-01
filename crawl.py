@@ -1,6 +1,7 @@
 # Web Crawler: GitHub Remaster
 from bs4 import BeautifulSoup
 import requests
+import sys
 
 # Block URL keywords that make things boring
 blacklist = {
@@ -19,9 +20,6 @@ blacklist = {
 # Recursive function to crawl hrefs
 def crawl(url):
 
-  global visited
-  global blacklist
-  
   # Append site being visited to list file
   visited = open('visited.txt', 'a')
   visited.write(url + ',')
