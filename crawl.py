@@ -56,6 +56,12 @@ def crawl(url):
     if href.endswith('/'):
       href = href[:-1]
     
+    # Checks that link is a thing on the internet
+    try:
+      requests.get(href)
+    except:
+      continue
+    
     # Checks that link does not contain blacklist keyword
     ok = False
     for item in blacklist:
@@ -75,12 +81,6 @@ def crawl(url):
       ok = True
     visited.close()
     if not ok: continue
-    
-    # Checks that link is a thing on the internet
-    try:
-      requests.get(href)
-    except:
-      continue
 
     # Print and recursively crawl href if all conditions are met
     print(href)
