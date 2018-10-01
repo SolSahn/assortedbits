@@ -37,10 +37,10 @@ def crawl(url):
     if not href:
       continue
     
-    # Append URL to start of link if it begins with a /
+    # Avoid loops like foo.com/upload/upload/upload/upload/...
     if href.startswith('/'):
-      href = url + href
-    # Avoids occasional slip-up where site is revisited over and over
+      continue
+    # Avoid loops like foo.com////////////...
     if href.endswith('/'):
       href = href[:-1]
     
