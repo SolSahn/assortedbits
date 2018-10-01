@@ -82,6 +82,7 @@ def crawl(url):
     except:
       continue
 
+    # Print and recursively crawl href if all conditions are met
     print(href)
     crawl(href)
     
