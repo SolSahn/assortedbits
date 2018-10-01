@@ -56,6 +56,15 @@ def crawl(url):
     if href.endswith('/'):
       href = href[:-1]
     
+    # Checks that link does not contain blacklist keyword
+    ok = False
+    for item in blacklist:
+      if item in href:
+        break
+    else:
+      ok = True
+    if not ok: continue
+    
     # Check that link has not already been visited
     ok = False
     visited = open('visited.txt', 'r')
@@ -65,15 +74,6 @@ def crawl(url):
     else:
       ok = True
     visited.close()
-    if not ok: continue
-    
-    # Checks that link does not contain blacklist keyword
-    ok = False
-    for item in blacklist:
-      if item in href:
-        break
-    else:
-      ok = True
     if not ok: continue
     
     # Checks that link is a thing on the internet
