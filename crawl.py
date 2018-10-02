@@ -34,7 +34,7 @@ def crawl(url):
 
   # Append site being visited to list file
   visited = open('visited.txt', 'a')
-  visited.write(url + ',')
+  visited.write(url + '\n')
   visited.close()
 
   # Get page from URL
@@ -74,7 +74,7 @@ def crawl(url):
     # Check that link has not already been visited
     ok = False
     visited = open('visited.txt', 'r')
-    for visit in visited.read().split(','):
+    for visit in visited.read().split('\n'):
       if href == visit:
         break
     else:
