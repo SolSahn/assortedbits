@@ -13,6 +13,14 @@ if has('gui_running')
   set guioptions -=T
 endif
 
+" Remappings
+nnoremap j gj
+nnoremap k gk
+nnoremap B ^
+nnoremap E $
+nnoremap ^ <nop>
+nnoremap $ <nop>
+
 " Indentation stuff
 filetype indent on
 set expandtab
