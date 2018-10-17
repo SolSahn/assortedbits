@@ -17,7 +17,7 @@ nnoremap $ <nop>
 
 " Indentation stuff
 filetype indent on
-set shiftwidth=1
+set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
