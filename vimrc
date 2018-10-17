@@ -1,17 +1,11 @@
 " Basic appearance settings
-colorscheme ron
+colorscheme gruvbox
+set termguicolors
+set background=dark
 syntax enable
 set lazyredraw
 set number
 set ruler
-
-" If gvim, sets theme to gruvbox and removes annoying toolbars
-if has('gui_running')
-  colorscheme gruvbox
-  set background=dark
-  set guioptions -=m
-  set guioptions -=T
-endif
 
 " Remappings
 nnoremap j gj
