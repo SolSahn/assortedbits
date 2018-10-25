@@ -1,0 +1,11 @@
+urxvt.font:           xft:Inconsolata:size=10.5
+urxvt.background:     black
+urxvt.foreground:     white
+urxvt.scrollBar:      false
+urxvt.tintColor:      white
+urxvt.fading:         15
+urxvt.fadeColor:      black
+urxvt.shading:        40
+urxvt.inheritPixmap:  true
+urxvt.pointerColor:   black
+urxvt.pointerColor2:  white
